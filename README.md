@@ -14,11 +14,11 @@ Design an **Agentic AI System** with two or more collaborating agents to perform
 
 ## 🎯 Objective
 
-- Demonstrate understanding of **agent workflows**
-- Use **LangGraph orchestration**
-- Maintain **shared state (memory)** between agents
-- Implement **tool usage**
-- *(Optional)* Provide a **Streamlit UI**
+- Demonstrate understanding of agent workflows  
+- Use LangGraph orchestration  
+- Maintain shared state (memory) between agents  
+- Implement tool usage  
+- *(Optional)* Provide a Streamlit UI  
 
 ---
 
@@ -47,26 +47,29 @@ Company Intelligence Report
 ## 🧠 Agents Description
 
 ### 🔹 Agent 1: Data Collector
-- Fetches company data from a **local JSON knowledge base**
-- Acts as a **tool-using agent**
-- Stores results in shared state (`raw_data`)
+- Fetches company data from a local JSON knowledge base  
+- Acts as a tool-using agent  
+- Stores results in shared state (`raw_data`)  
 
 ### 🔹 Agent 2: Analyst
-- Uses **Ollama (LLaMA 3)** for analysis
+- Uses Ollama (LLaMA 3) for analysis  
 - Generates:
-  - Company overview / summary
-  - Key insights
-  - Potential risks
-- **Auto-fallback behavior**:
-  - If structured data is missing → uses LLM’s general business knowledge
+  - Company overview / summary  
+  - Key insights  
+  - Potential risks  
+
+**Auto-fallback behavior:**  
+If structured data is missing → uses LLM’s general business knowledge
 
 ---
 
 ## 🔁 Orchestration (LangGraph)
 
-- Implemented using `StateGraph`
-- Shared memory via `TypedDict` (`AgentState`)
-- Execution flow:
+- Implemented using `StateGraph`  
+- Shared memory via `TypedDict` (`AgentState`)  
+
+**Execution flow:**
+Data Collector → Analyst → END
 
 
 ---
@@ -75,20 +78,20 @@ Company Intelligence Report
 
 A clean Streamlit UI is provided to interact with the system:
 
-- Enter company name
-- Trigger agent workflow
-- View generated intelligence report
+- Enter company name  
+- Trigger agent workflow  
+- View generated intelligence report  
 
 ---
 
 ## 🛠️ Tech Stack
 
-- Python 3.10+
-- LangChain
-- LangGraph
-- Ollama (local LLM runtime)
-- Streamlit
-- JSON-based knowledge base
+- Python 3.10+  
+- LangChain  
+- LangGraph  
+- Ollama (local LLM runtime)  
+- Streamlit  
+- JSON-based knowledge base  
 
 ---
 
@@ -109,6 +112,7 @@ company-intelligence-agent/
 ## ⚙️ Setup Instructions
 
 ### 1️⃣ Install Ollama
+
 Download and install Ollama from:  
 https://ollama.com
 
@@ -166,6 +170,7 @@ Extend to Task 2: Conversational Knowledge Bot
 
 Add caching for faster responses
 
-👤 Abhinay Sangem
+👤 Author
+Abhinay Sangem
 Data Scientist Intern Candidate
 Profile Submitted via: Kodnest
